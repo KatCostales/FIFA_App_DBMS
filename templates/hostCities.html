@@ -1,0 +1,199 @@
+<!DOCTYPE html> <!-- Declaration of document type/version-->
+<html> <!-- root element-->
+
+<head> <!-- Defines meta-info. on document: title, character encoding, & stylesheets-->
+    <title>World Cup Travel Guide</title>
+    <meta charset="UTF-8"> <!-- specfiies charcter encoding: ASCII-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--viewport properties: responsive design -->
+    <link rel="stylesheet" href="../static/index.css"> <!-- connect css page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- style of website - fonts -->
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* font family */
+            font-weight: 200;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 5px;
+            font-weight: 500;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Beginning of content -->
+
+
+
+    <!-- Menu Bar -->
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:5px;">
+            <a href="/" class="w3-bar-item w3-button">World Cup Travel Guide</a>
+            <!-- Right-sided navbar links. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="/hostCities" class="w3-bar-item w3-button">Host Cities</a>
+                <a href="/" class="w3-bar-item w3-button">Matches</a>
+                <a href="/about" class="w3-bar-item w3-button">About</a>
+                <a href="/contact" class="w3-bar-item w3-button">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Autoplay video -->
+    <div class="w3-display-container">
+        <video autoplay loop id="myVideo" audio.volume = ".1">
+            <source src="../static/This is FIFA World Cup 26™.mp4" type="video/mp4">
+        </video>
+    </div>
+
+   
+
+    <!-- Filter Search UI Elements -->
+    <div class="w3-container">
+        <h1>Explore various Teams, Countries, and Attractions! </h1>
+    </div>
+
+    <!-- Filter Search UI Elements -->
+    <div class="w3-row w3-border">
+        <div class="w3-third w3-container">
+            <h2>Filter</h2>
+        </div>
+
+        <!-- Form that submits Teams and Country fields -->
+        <div class="w3-third w3-container">
+            <h2>Teams:</h2>
+            <form action="/templates/hostCities.html"></form>
+            <input type="text" id="team" name="team" text="team"> <br><br>
+            <button type="submit" id="submit-button" name="team" text="Submit">Submit </button>
+        </div>
+
+        <div class="w3-third w3-container">
+            <h2>Host Cities:</h2>
+            <input type="text" id="city" name="city" text="city"> <br><br>
+            </form>
+        </div>
+    </div>
+    <div></div>
+    <div>
+
+    </div>
+    <!-- Sidebar navigation -->
+    
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h2 class="w3-bar-item">Filter</h2>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+
+    <!-- Page Content -->
+    <!-- w3 Card containter - Visually display queries and user selects -->
+    <div style="margin-left:25%">
+
+        <div class="w3-container">
+            <h1>Display user query selects from above</h1>
+        </div>
+
+        <div class="w3-container">
+            <h2>Sidebar Navigation Example</h2>
+            <p>Sample SideBar Text: Notes: The sidebar with is set with "style="width:25%".</p>
+        </div>
+        <div class="w3-container">
+            <h2>Search Results for...</h2>
+
+            <div class="w3-card-4" style="width:80%"> <!-- Size of card: width-->
+                <header class="w3-container w3-light-grey">
+                    <h3>Main Table Name</h3>
+                </header>
+                <div class="w3-container">
+                    <p>Attributes Listed or Searched for by user - can change to buttons if needed</p>
+                    <hr>
+                    <img src="/static/contactImage.jpg" alt="Avatar" class="w3-left w3-margin-right"
+                        style=" width:300px">
+                    <p>Description - data contents of the tables</p>
+                    <p> Pull contents from database to display to user - change buttons according to how user will
+                        interact with the website.</p>
+                    <br>
+                </div>
+                <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+            </div>
+        </div>
+        <hr>
+        <hr>
+
+        <!-- w3 Card containter 2 -->
+
+
+        <div class="w3-card-4" style="width:80%"> <!-- Size of card: width-->
+            <header class="w3-container w3-light-grey">
+                <h3>Main Table Name</h3>
+            </header>
+            <div class="w3-container">
+                <p>Attributes Listed or Searched for by user - can change to buttons if needed</p>
+                <hr>
+                <img src="/static/contactImage.jpg" alt="Avatar" class="w3-left w3-margin-right" style=" width:300px">
+                <p>Description - data contents of the tables</p>
+                <p> Pull contents from database to display to user - change buttons according to how user will
+                    interact with the website.</p>
+                <br>
+            </div>
+            <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-32">
+        <p>Copyright World Cup Trip Guide</p>
+
+    </footer>
+
+    <script>
+        function myAccFunc() {
+            var x = document.getElementById("demoAcc");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-green";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-green", "");
+            }
+        }
+
+        function myDropFunc() {
+            var x = document.getElementById("demoDrop");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-green";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-green", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

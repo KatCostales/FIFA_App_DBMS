@@ -1,0 +1,230 @@
+<!DOCTYPE html> <!-- Declaration of document type/version-->
+<html> <!-- root element-->
+
+<head> <!-- Defines meta-info. on document: title, character encoding, & stylesheets-->
+    <title>World Cup Travel Guide</title>
+    <meta charset="UTF-8"> <!-- specfiies charcter encoding: ASCII-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--viewport properties: responsive design -->
+    <link rel="stylesheet" href="/static/index.css"> <!-- connect css page -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">  access to fontawesome fonts -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- style of website - fonts -->
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* font family */
+            font-weight: 200;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 5px;
+            font-weight: 500;
+
+        }
+    </style>
+    <script src="../main.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:5px;">
+
+            <!-- <img src="../static/WCT_Logo.png"> -->
+            <a href="/" class="w3-bar-item w3-button">World Cup Travel Guide</a>
+            <img src="../static/WCT_Logo.png" class="w3-bar-item w3-button" height="10" weight="20">
+            <!-- Right-sided navbar links. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="/hostCities" class="w3-bar-item w3-button">Host Cities</a>
+                <a href="" class="w3-bar-item w3-button">Matches</a>
+                <a href="/about" class="w3-bar-item w3-button">About</a>
+                <a href="/contact" class="w3-bar-item w3-button">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Autoplay video -->
+    <div class="w3-display-container">
+        <video muted autoplay loop id="myVideo">
+            <source src="../static/World Cup 2022 Hype Video - [Love Me Again].mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Scroll Meny Horizontal -->
+    <div class="scrollmenu">
+        <img id="w3-round-xxlarge" src="../static/host16.jpeg" width="1900" height="500" class="w3-display-container"
+            background-color="w3-white">
+        <img id="w3-round-xxlarge" src="../static/hostCity copy.jpeg" width="1900" height="500"
+            class="w3-display-container" background-color="w3-white">
+    </div>
+
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:1280px">
+
+
+        <!-- About Section -->
+        <div class="w3-row w3-padding-64" id="about">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                <img src="../static/WCT_Logo.png" class="w3-round w3-image" alt="Table Setting" width="600"
+                    height="750">
+            </div>
+
+            <div class="w3-col m6 w3-padding-large">
+                <h1 class="w3-center">About Us</h1><br>
+                <h5 class="w3-center">World Cup Travel Guide 2026</h5>
+                <p class="w3-large">Matches will be played in 16 cities across 3 countries over a month. Spectators
+                    from
+                    all over the world will be looking for things to do during their vacation. Our website will help
+                    fans plan their World Cup trip by providing useful lodging, eating, transportation, and
+                    entertainment information and activities. <span class="w3-tag w3-light-grey"></span>
+                </p>
+                <p class="w3-large w3-text-grey w3-hide-medium">Find out the full match schedule for World Cup
+                    2026 in Canada, Mexico and USA with fixtures and results from each of the 104 games in the
+                    48-team tournament..</p>
+                <button class="w3-button w3-black"> MATCH SCHEDULE </button>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- match selection user -->
+        <div class="w3-display-container">
+            <h1>Explore Teams, Countries, and City Attractions </h1>
+            <h5>Country, Matches, Attractions</h5>
+            <div class="w3-bar-item">
+                <img class=".w3-ho" src="../static/country.png">
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-black">Host Cities</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey" id="myDIV">
+                        <input class="w3-input w3-padding" type="text" placeholder="Search.." id="userSelect"
+                            onkeyup="filterUserPreference()">
+                        <a class="w3-bar-item w3-button" id="userInput">Mexico</a>
+                        <a class="w3-bar-item w3-button" id="userInput">Canada</a>
+                        <a class="w3-bar-item w3-button" id="userInput">USA</a>
+                        <a class="w3-bar-item w3-button" id="userInput">Contact</a>
+                        <a class="w3-bar-item w3-button" id="userInput">Custom</a>
+                        <a class="w3-bar-item w3-button" id="userInput">Support</a>
+                        <a class="w3-bar-item w3-button" id="userInput" ">Tools</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <!-- World Cup Travel Guide Section -->
+        <div class=" w3-row w3-padding-64" id="plan">
+                            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                                <img src="../static/contactImage.jpg" class="w3-round w3-image" alt="Table Setting"
+                                    width="600" height="750">
+                            </div>
+
+                            <div class="w3-col m6 w3-padding-large">
+                                <h1 class="w3-center">World Cup Travel Guide</h1><br>
+                                <h5 class="w3-center">Find Lodging, Restaurants, and Local Favorites!</h5>
+                                <p class="w3-large">Our application provides a variety of traveler information from
+                                    lodging
+                                    accomodations to fun activities to do during your World Cup Adventures! <span
+                                        class="w3-tag w3-light-grey"></span>
+                                </p>
+                                <p class="w3-large w3-text-grey w3-hide-medium">Live too far away? Plan your world
+                                    cup
+                                    trip with
+                                    our
+                                    budget finder. Our budget finder matches your travel cost based on where you
+                                    live
+                                    and where
+                                    you plan
+                                    on visiting!</p>
+                                <button class="w3-button w3-black"> TRAVEL COST TOOL </button>
+                            </div>
+                    </div>
+
+
+                    <hr>
+
+                    <!-- Menu Section -->
+                    <div class="w3-row w3-padding-64" id="menu">
+                        <div class="w3-col l6 w3-padding-large">
+                            <h1 class="w3-center">Plan your World Cup experience!</h1><br>
+                            <h4>Host Cities</h4>
+                            <p class="w3-text-grey">View activities, attractions, and other fun activities available
+                            </p>
+                            <br>
+                            <button class="w3-button w3-black">READ MORE</button>
+
+                            <h4>Find Local Favorites!</h4>
+                            <p class="w3-text-grey">Discover your local favorites at any host city!</p><br>
+                            <button class="w3-button w3-black">READ MORE</button>
+
+                            <h4>Travel Costs</h4>
+                            <p class="w3-text-grey">Be prepared! View estimate travel costs</p><br>
+                            <button class="w3-button w3-black">READ MORE</button>
+
+                            <h4>Follow Country Matches</h4>
+                            <p class="w3-text-grey">Stay up-to-date with your football team!</p><br>
+                            <button class="w3-button w3-black">READ MORE</button>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- End page content -->
+            </div>
+
+            <!-- Optional: some overlay text to describe the video -->
+            <div id="myDIV">
+                <div class="content">
+                    <h1>Welcome to your World Cup Travel Guide!</h1>
+                    <p>Welcome to World Cup Trip, where your journey to the ultimate soccer spectacle begins! Embark on
+                        an adventure through our one-stop travel planner designed exclusively for the FIFA World Cup.
+                        Whether you're a die-hard fan or a curious traveler, get ready to experience the thrill of the
+                        beautiful game like never before. Start planning your unforgettable World Cup journey today!
+                    </p>
+                    <!-- Use a button to pause/play the video with JavaScript -->
+                    <div>
+                        <button onclick="hideBottomNav()" class="w3-button w3-black">Reject All</button>
+                        <button onclick="hideBottomNav()" class="w3-button w3-black">Accept All</button>
+                        <button onclick="hideBottomNav()" class="w3-button w3-black">Close</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Footer -->
+            <footer class="w3-center w3-light-grey w3-padding-32">
+                <p>Copyright World Cup Trip Guide</p>
+
+            </footer>
+
+            <script>
+                function hideBottomNav() {
+                    var x = document.getElementById("myDIV");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
+
+
+            </script>
+
+
+
+
+</body>
+
+</html>
